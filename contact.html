@@ -1,52 +1,57 @@
 <!DOCTYPE html>
 <html>
-
-    <header class="header">
-        <div class="nav-content">
-            <div class="nav-top">
-                <div class="list-top">
-                    <div class="logo">
-                        <h1>LT</h1>
-                    </div>
-                    <div class="close-menu-btn">
-                        <h1>X</h1>
-                    </div>
-                </div>
-                <div class="hamburger-container flex-center">
-                    <a class="icon" onclick="setMobileHeader()">
-                        <i class="fa fa-bars fa-2x"></i>
-                    </a>
-                </div>
-                <script type="text/javascript">
-                    function setMobileHeader() {
-                        let navList = document.getElementById("nav-list");
-                        if(navList.style.display === "block") {
-                            navList.style.display = "none";
-                        } else {
-                            navList.style.display = "block";
-                        }
-                    }
-                </script>
-            </div>
-            <div class="nav-body">
-                <ul class="nav-list" id="nav-list">
-                    <a href="/"><li>Home</li></a>
-                    <a href="/resume"><li>Resume</li></a>
-                    <a href="/contact"><li>Contact Me!</li></a>
-                    <a href="/sorting" class="mobile-sort-link"><li>Sorting Algorithm Visualizer</li></a>
-                    <li class="dropdown">
-                        <a>Projects</a>
-                        <ul class="project-dropdown-content">
-                            <!-- <li><a class="project-dropdown-item" href="/btree">B+Tree Visualizer</a></li> -->
-                            <a class="project-dropdown-item" href="/sorting"><li>Sorting Algorithm Visualizer</li></a>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </header>
-
+    <head>
+        <link rel="stylesheet" href="static/style.css">
+        <title>Liam's Website</title>
+    </head>
     <body>
+
+        <header class="header">
+            <div class="nav-content">
+                <div class="nav-top">
+                    <div class="list-top">
+                        <div class="logo">
+                            <h1>LT</h1>
+                        </div>
+                        <div class="close-menu-btn">
+                            <h1>X</h1>
+                        </div>
+                    </div>
+                    <div class="hamburger-container flex-center">
+                        <a class="icon" onclick="setMobileHeader()">
+                            <i class="fa fa-bars fa-2x"></i>
+                        </a>
+                    </div>
+                    <script type="text/javascript">
+                        function setMobileHeader() {
+                            let navList = document.getElementById("nav-list");
+                            if(navList.style.display === "block") {
+                                navList.style.display = "none";
+                            } else {
+                                navList.style.display = "block";
+                            }
+                        }
+                    </script>
+                </div>
+                <div class="nav-body">
+                    <ul class="nav-list" id="nav-list">
+                        <a href="/"><li>Home</li></a>
+                        <a href="/resume"><li>Resume</li></a>
+                        <a href="/contact"><li>Contact Me!</li></a>
+                        <a href="/sorting" class="mobile-sort-link"><li>Sorting Algorithm Visualizer</li></a>
+                        <li class="dropdown">
+                            <a>Projects</a>
+                            <ul class="project-dropdown-content">
+                                <!-- <li><a class="project-dropdown-item" href="/btree">B+Tree Visualizer</a></li> -->
+                                <a class="project-dropdown-item" href="/sorting"><li>Sorting Algorithm Visualizer</li></a>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+
         <div class="contact-container">
             <form id="contact-form" class="contact-form">
                 <div class="form-content">

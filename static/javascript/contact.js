@@ -1,5 +1,5 @@
 
-var form_id_js = "contact_form";
+var form_id_js = "contact-form";
 
 var data_js = {
     "access_token": "0dc241fglossr33qk3xtc2ef"

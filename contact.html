@@ -53,7 +53,7 @@
         </header>
 
         <div class="contact-container">
-            <form id="contact_form">
+            <form id="contact-form">
                 <div class="form-content">
                     <div class="contact-input name">
                         <label>Name</label><br>
@@ -95,17 +95,6 @@
                     </div>
                 </div>
             </form>
-
-            <script>
-                var submitButton = document.getElementById("submit_form");
-                var form = document.getElementById("email_form");
-                form.addEventListener("submit", function (e) {
-                    setTimeout(function() {
-                        submitButton.value = "Sending...";
-                        submitButton.disabled = true;
-                    }, 1);
-                });
-            </script> 
         </div>
     </body>
 </html>

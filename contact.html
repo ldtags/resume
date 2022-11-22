@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="static/style.css">
+        <script src="../static/javascript/contact.js"></script>
         <title>Liam's Website</title>
     </head>
     <body>
@@ -35,10 +36,10 @@
                 </div>
                 <div class="nav-body">
                     <ul class="nav-list" id="nav-list">
-                        <a href="/"><li>Home</li></a>
+                        <a href="~"><li>Home</li></a>
                         <a href="/resume"><li>Resume</li></a>
-                        <a href="/contact"><li>Contact Me!</li></a>
-                        <a href="/sorting" class="mobile-sort-link"><li>Sorting Algorithm Visualizer</li></a>
+                        <a href="~/contact"><li>Contact Me!</li></a>
+                        <a href="~/sorting" class="mobile-sort-link"><li>Sorting Algorithm Visualizer</li></a>
                         <li class="dropdown">
                             <a>Projects</a>
                             <ul class="project-dropdown-content">
@@ -51,9 +52,8 @@
             </div>
         </header>
 
-
         <div class="contact-container">
-            <form id="contact-form" class="contact-form">
+            <form id="contact_form">
                 <div class="form-content">
                     <div class="contact-input name">
                         <label>Name</label><br>
@@ -69,7 +69,7 @@
                     </div>
                     <br>
                     <div class="submit">
-                        <input type="submit" value="Send" name="send" class="contact-btn">
+                        <input id="submit_form" type="submit" value="Send" name="send" class="contact-btn">
                     </div>
                     <br>
                     <br>
@@ -89,6 +89,7 @@
                             >
                         </a>
                     </div>
+
                     <div class="powered-by flex-center">
                         <p>Powered by <a href="https://postmail.invotes.com" target="_blank">PostMail</a></p>
                     </div>
@@ -96,46 +97,15 @@
             </form>
 
             <script>
-                var form_id = "contact-form";
-
-                var sendButton = $("#" + form_id + " .submit [name='send']");
-
-                var data = {
-                    "access_token": "0dc241fglossr33qk3xtc2ef"
-                };
-
-                function onSuccess() {
-                    window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
-                }
-
-                function onError(error) {
-                    window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
-                }
-
-                function send() {
-                    sendButton.val('Sending…');
-                    sendButton.prop('disabled',true);
-
-                    var subject = $("#" + form_id + " [name='user_email']").val() + " -- " + $("#" + form_id + " [name='user_name']").val();
-                    var message = $("#" + form_id + " [name='text']").val();
-                    data['subject'] = subject;
-                    data['text'] = message;
-
-                    $.post('https://postmail.invotes.com/send',
-                        data,
-                        onSuccess
-                    ).fail(onError);
-
-                    return false;
-                }
-
-                sendButton.on('click', send);
-
-                var $form = $("#" + form_id);
-                $form.submit(function( event ) {
-                    event.preventDefault();
+                var submitButton = document.getElementById("submit_form");
+                var form = document.getElementById("email_form");
+                form.addEventListener("submit", function (e) {
+                    setTimeout(function() {
+                        submitButton.value = "Sending...";
+                        submitButton.disabled = true;
+                    }, 1);
                 });
-            </script>
+            </script> 
         </div>
     </body>
 </html>

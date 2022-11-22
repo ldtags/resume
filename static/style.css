@@ -309,6 +309,25 @@ li.dropdown {
 
 
 
+/* ---------- BTREE ---------- */
+
+.btree-content {
+    margin-top: 50px;
+    background-color: #ffffff;
+}
+
+.btree-inputs {
+    justify-content: center;
+    align-items: center;
+}
+
+.btree-content .input {
+    background-color: #6e7e94;
+}
+
+/* ---------- BTREE ---------- */
+
+
 
 /* ---------- SORTING ---------- */
 

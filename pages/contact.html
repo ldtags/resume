@@ -3,6 +3,11 @@
     <head>
         <link rel="stylesheet" href="static/style.css">
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function(){
+                emailjs.init('3p-bi8k1ve2ape4R7')
+            })();
+        </script>
         <script src="../static/javascript/contact.js"></script>
         <title>Liam's Website</title>
     </head>
@@ -40,14 +45,7 @@
                         <a href="/index"><li>Home</li></a>
                         <a href="/resume"><li>Resume</li></a>
                         <a href="/contact"><li>Contact Me!</li></a>
-                        <a href="/sorting" class="mobile-sort-link"><li>Sorting Algorithm Visualizer</li></a>
-                        <li class="dropdown">
-                            <a>Projects</a>
-                            <ul class="project-dropdown-content">
-                                <!-- <li><a class="project-dropdown-item" href="/btree">B+Tree Visualizer</a></li> -->
-                                <a class="project-dropdown-item" href="/sorting"><li>Sorting Algorithm Visualizer</li></a>
-                            </ul>
-                        </li>
+                        <a href="#projects"><li>Projects</li></a>
                     </ul>
                 </div>
             </div>
@@ -55,18 +53,19 @@
 
         <div class="contact-container">
             <form id="contact-form" class="contact-form">
+                <input type="hidden" name="contact_number">
                 <div class="form-content">
                     <div class="contact-input name">
-                        <label>Subject</label><br>
-                        <input type="text" name="subject" placeholder="Subject">
+                        <label>Name</label><br>
+                        <input type="text" name="user_name" placeholder="Name">
                     </div>
-                    <!-- <div class="contact-input email">
+                    <div class="contact-input email">
                         <label>Email</label><br>
                         <input type="email" name="user_email" placeholder="jdoe@mail.com">
-                    </div> -->
+                    </div>
                     <div class="contact-input message">
                         <label>Message</label><br>
-                        <textarea name="text" class="message"></textarea>
+                        <textarea name="message" class="message"></textarea>
                     </div>
                     <br>
                     <div class="submit">
@@ -92,7 +91,7 @@
                     </div>
 
                     <div class="powered-by flex-center">
-                        <p>Powered by <a href="https://postmail.invotes.com" target="_blank">PostMail</a></p>
+                        <p>Powered by <a href="https://www.emailjs.com/" target="_blank">EmailJS</a></p>
                     </div>
                 </div>
             </form>

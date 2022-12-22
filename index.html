@@ -12,32 +12,12 @@
 
         <header class="header">
             <div class="nav-content">
-                <div class="nav-top">
-                    <div class="list-top">
-                        <div class="logo">
-                            <h1>LT</h1>
-                        </div>
-                        <div class="close-menu-btn">
-                            <h1>X</h1>
-                        </div>
+                <div class="nav-left">
+                    <div class="nav-name">
+                        <a class="name">Liam Tangney</a>
                     </div>
-                    <div class="hamburger-container flex-center">
-                        <a class="icon" onclick="setMobileHeader()">
-                            <i class="fa fa-bars fa-2x"></i>
-                        </a>
-                    </div>
-                    <script type="text/javascript">
-                        function setMobileHeader() {
-                            let navList = document.getElementById("nav-list");
-                            if(navList.style.display === "block") {
-                                navList.style.display = "none";
-                            } else {
-                                navList.style.display = "block";
-                            }
-                        }
-                    </script>
                 </div>
-                <div class="nav-body">
+                <div class="nav-right">
                     <ul class="nav-list" id="nav-list">
                         <a href="/resume"><li>Home</li></a>
                         <a href="pages/resume"><li>Resume</li></a>
@@ -63,6 +43,10 @@
                         <div class="intro-body">
                             <a>
                                 I'm a junior at the University of Wisconsin - La Crosse pursuing a Bachelor of Science in Computer Science.
+                            </a>
+                            <br><br>
+                            <a>
+                                Outside of my classes, you can either find me serving at howies, working on my personal projects, or spending time with my friends.
                             </a>
                             <br><br>
                             <a>
